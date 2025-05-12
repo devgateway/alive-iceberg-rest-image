@@ -24,7 +24,7 @@ repositories {
 }
 
 ext {
-  icebergVersion = '1.6.0'
+  icebergVersion = '1.5.2'
   hadoopVersion = '3.3.6'
 }
 
@@ -51,6 +51,8 @@ dependencies {
 
   implementation 'org.xerial:sqlite-jdbc:3.46.1.0'
   implementation 'org.postgresql:postgresql:42.7.4'
+
+  implementation 'org.apache.ozone:ozone-filesystem-hadoop3:1.4.1'
 }
 
 jar {

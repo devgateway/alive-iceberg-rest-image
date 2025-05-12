@@ -39,4 +39,4 @@ EXPOSE $REST_PORT
 USER iceberg:iceberg
 ENV LANG en_US.UTF-8
 WORKDIR /usr/lib/iceberg-rest
-CMD ["java", "-jar", "iceberg-rest-image-all.jar"]
+CMD ["java", "--add-opens", "java.base/java.lang=ALL-UNNAMED", "--add-opens", "java.management/com.sun.jmx.mbeanserver=ALL-UNNAMED", "--add-exports", "java.management/com.sun.jmx.mbeanserver=ALL-UNNAMED", "--add-opens", "java.base/java.nio=ALL-UNNAMED", "-jar", "iceberg-rest-image-all.jar"]
